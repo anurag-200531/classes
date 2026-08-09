@@ -7,7 +7,7 @@ export default function AddStudentModal({ onClose }) {
 
   const [formData, setFormData] = useState({
     name: '',
-    class: 'Class 10',
+    class: 'Class 6',
     batch: 'Morning (8:00 AM)',
     admissionDate: new Date().toISOString().split('T')[0],
     monthlyFee: '1500',
@@ -65,6 +65,15 @@ export default function AddStudentModal({ onClose }) {
             <div className="form-group">
               <label>Class / Grade *</label>
               <select name="class" className="form-control" value={formData.class} onChange={handleChange}>
+                <option value="PG">PG (Pre-school)</option>
+                <option value="Nursery">Nursery</option>
+                <option value="LKG">LKG</option>
+                <option value="UKG">UKG</option>
+                <option value="Class 1">Class 1</option>
+                <option value="Class 2">Class 2</option>
+                <option value="Class 3">Class 3</option>
+                <option value="Class 4">Class 4</option>
+                <option value="Class 5">Class 5</option>
                 <option value="Class 6">Class 6</option>
                 <option value="Class 7">Class 7</option>
                 <option value="Class 8">Class 8</option>
